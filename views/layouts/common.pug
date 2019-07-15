@@ -1,0 +1,21 @@
+doctype
+html(lang='vi')
+    head
+        meta(charset='utf-8')
+        title Học ExpressJs
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='/') Học Express
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link.active(href='/') Home
+                    li.nav-item
+                        a.nav-link(href='/users') Users
+            if user
+                p= user.name
+        .container.pt-5 
+            block content
